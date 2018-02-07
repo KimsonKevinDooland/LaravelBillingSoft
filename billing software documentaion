@@ -1,0 +1,58 @@
+TABLES
+------
+users - user information
+products - id, product_id, product_name, product_code, product_qty, product_price, product_desc, created_date.
+seller - seller_name, seller_address, seller_phone number.
+barcode - id, barcode_number, product_id, created_date.
+invetory - id, product_id, product_qty, barcode_number. 
+invoice - id, name, address, phone number, product_id, product_qty, product_price, barcode_number.
+
+
+
+==================CHANGE THE PRODUCT QTY AND PUT IT ONLY IN INVENTORY QTY==================
+==================HAVE THE BARCODE NUMBER IN THE PRODUCT TABLE =====================
+
+
+Logic:
+
+STEP 1.
+1. Product comes in and gets stored in products table.
+2. Generate random barcode number and link it with that product_id in the barcode table.
+3. Print the Barcode's
+
+
+
+STEP A under 1.
+
+1. Save the product_id and product_qty.
+2. when a invoice bill is generated the product_qty for that product_id will be minimized.
+
+
+STEP 2.
+1. Generate an invoice bill into pdf file.
+
+
+WHAT IF SAME PRODUCT COMES BACK AGAIN IN A DIFFRENT QTY?
+1. When ever the products are been added we will give them a button saying exesting product. 
+2. If exestint product is true enter the barcode number, product_qty to generate.
+3. update the newly entered product_qty_value to inventory table for that product_id.
+
+
+EXTRAS
+
+1. Check if barcode is unique. If not unique print again till unique.
+2. Middle Ware
+
+
+*******************************************************************************
+
+FOR PRODUCT QTY WE assign the qty to the invertory table with the product id	
+
+ADD NEW EXESTING PRODUCT
+------------------------
+1. put in the product code or id and submit-> we get the product or you just edit it from inventory.
+
+
+
+
+*THEY ARE CHANGES IN THE TABLE.
