@@ -18,10 +18,9 @@ class CreateInvoicesTable extends Migration
             $table->string('name');
             $table->string('address');
             $table->string('phone');
-            $table->integer('product_id');
-            $table->integer('product_qty_value');
-            $table->integer('product_price_value');
+            $table->string('invoice_number');
             $table->string('discount_amount');
+            $table->string('total_amount');
             $table->timestamps();
         });
     }

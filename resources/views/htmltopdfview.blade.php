@@ -23,8 +23,8 @@
         @foreach ($products as $product)
 
         <div class="col-md-3">
-            <div>{!! DNS1D::getBarcodeHTML($product->barcode_number, "CODABAR")!!} </div>
-            <p>{{ $product->barcode_number }}</p>
+            <div style="">{!! DNS1D::getBarcodeHTML($product->barcode_number, "CODABAR")!!} </div>
+            <p>{{ $product->barcode_number }}</p> <br> <br><br>
         </div>
         @endforeach
 

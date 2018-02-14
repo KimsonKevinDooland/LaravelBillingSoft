@@ -10,8 +10,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-
-
 Route::group(['middleware' => ['auth']], function () {
 
 	Route::get('/home', 'HomeController@index')->name('home');
@@ -19,8 +17,9 @@ Route::group(['middleware' => ['auth']], function () {
 	Route::get('product_view', 'ProductController@index');
 
     //invoice generation get barcode
-    Route::get('invoice', function(){ 
-        return view('invoice.new_invoice'); 
+    Route::get('invoice', function(){
+        $invoice_number = mt_rand();
+        return view('invoice.new_invoice', compact('invoice_number')); 
     });
     Route::post('/getbarcode','InvoiceController@barcodeget');
 

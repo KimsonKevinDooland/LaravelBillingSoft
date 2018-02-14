@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Invoice extends Model
 {
     protected $fillable = [
-        'name', 'address', 'phone', 'product_id', 'product_qty_value', 'product_price_value', 'discount_amount'
+        'name', 'address', 'phone', 'invoice_number', 'discount_amount', 'total_amount',
     ];
 
      public function products()
